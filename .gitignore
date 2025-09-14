@@ -1,3 +1,7 @@
+#stuff Jeff wants me to add, pycache automatically added below
+.DS_Store
+*.pyc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
