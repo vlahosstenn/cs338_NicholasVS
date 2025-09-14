@@ -1,0 +1,6 @@
+My name is Nicholas Vlahos-Sten
+
+The setup for Kali went smoothly, and I got your dangerous site working on the virtual machine. 
+I have not used Kali before, so I cannot say for certain how I will use it, other than I plan to do what is recommended in the class and that 
+having a way to run dangerous applications and see behind the scenes what's going on with them without endangering my computer seems extremely
+useful.
