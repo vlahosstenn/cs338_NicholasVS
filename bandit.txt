@@ -1,0 +1,79 @@
+Level 0 start with ssh -p 2220 banditN@bandit.labs.overthewire.org
+
+Level 0 -> Level 1 
+
+Solution: use the command "cat readme" to read the readme file, which contains the password: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+
+Summary of lessons: ls shows directory contents and from there you can open specific files in the unix command line with cat and the file name 
+
+
+Level 1 -> Level 2
+
+Solution: use the command "cat ./-" to read the - file, which contains the password: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+I did use the google search linked on the bandit "helpful reading materials" page which explained why this works
+
+Summary of lessons: Some files can be named with special characters that mean something else when written in the unix command line. To access these files, 
+you need to list the entire path to the file, starting with ./
+
+
+Level 2 -> Level 3
+
+Solution: use the command "cat ./"--spaces in this filename--"" to read the titular file, which contains the password: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+Summary of lessons: Wrapping a file name in quotes allows the command line to ignore any special characters within it 
+
+
+Level 3 -> Level 4
+
+Solution: Use either "find" or "ls -a" to find the name of the hidden file "...Hidden-From-You" and open it with cat to get password: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+Summary of lessons: some files can be hidden, and not show up with a regular old ls. To find their names, use find or ls -a
+
+Level 4 -> Level 5
+
+Solution:
+
+Summary of lessons:
+
+Level 5 -> Level 6
+
+Solution:
+
+Summary of lessons:
+
+Level 6 -> Level 7
+
+Solution:
+
+Summary of lessons:
+
+Level 7 -> Level 8
+
+Solution:
+
+Summary of lessons:
+
+Level 8 -> Level 9
+
+Solution:
+
+Summary of lessons:
+
+Level 9 -> Level 10
+
+Solution:
+
+Summary of lessons:
+
+Level 10 -> Level 11
+
+Solution:
+
+Summary of lessons:
+
+Level 11 -> Level 12
+
+Solution:
+
+Summary of lessons:
+
