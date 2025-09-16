@@ -31,9 +31,10 @@ Summary of lessons: some files can be hidden, and not show up with a regular old
 
 Level 4 -> Level 5
 
-Solution:
+Solution: I won't lie I just tried catting all 10 files in the folder, until I found the one that contained a password instead of gibberish, 
+which was "-file06" with the password: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
-Summary of lessons:
+Summary of lessons: Not all files contain data legible to a human; if the output looks weird it's probably not legible. 
 
 Level 5 -> Level 6
 
