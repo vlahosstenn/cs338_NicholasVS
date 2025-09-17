@@ -38,43 +38,59 @@ Summary of lessons: Not all files contain data legible to a human; if the output
 
 Level 5 -> Level 6
 
-Solution:
+Solution: Use the command "du -b -a" to see all of the files in the inhere directory and all its subdirectories and their corresponding 
+size in bytes. Per the instructions, the file with the password is 1033 bytes, and the .file2 file in inhere07 was the only file with 1033 bytes. password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
-Summary of lessons:
+Summary of lessons: The du command can be used to learn information about the files in a given directory. 
 
 Level 6 -> Level 7
 
-Solution:
+Solution: This took a while because I was searching in the home directory not the one above it, but basically you have to "cd .." til you can't anymore 
+and then use the command "find -user bandit7 -group bandit6 -size 33c" to find the file containing the password is 
+./var/lib/dpkg/info/bandit7.password btw password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
-Summary of lessons:
+Summary of lessons: The find command can be used to find specific files fitting a potpourri of conditions also read manuals because the option for bytes on du is "-b"
+but the option on find is "-c"
 
-Level 7 -> Level 8
+Level 7 -> Level 8 
 
-Solution:
+Solution: use the command "grep millionth data.txt" to only print the line from data.txt containing the word millionth, next to which resides, so says the instructions,
+the password: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 
-Summary of lessons:
+Summary of lessons: if you know what you're looking for in a large file, grep is a great tool
 
 Level 8 -> Level 9
 
-Solution:
+Solution: very inelegant, but I just did "sort data.txt" and just scrolled through the alphabetically sorted list until I found the only unique line 
+with the password: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 
-Summary of lessons:
+Summary of lessons: sort can find specific lines in files 
 
 Level 9 -> Level 10
 
-Solution:
+Solution: used "strings data.txt" to print out a list of all the "strings" in the file, scrolled through and found the only line with a bunch of === after which was promised
+the password: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
 
-Summary of lessons:
+Summary of lessons: strings also good command for finding things in files
 
 Level 10 -> Level 11
 
-Solution:
+Solution: After copying the string gotten from doing "cat data.txt" I put said string after the command "base64 -d <<<" to decode the string 
+from base 64 to English and put the translation directly into the command line. Password: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 
-Summary of lessons:
+Summary of lessons: Pretty easy to encode and decode to base64, so I guess challenge is figuring out when something is encoded in the first place
 
 Level 11 -> Level 12
 
 Solution:
+Inelegant but fun method, I did "cat data.txt | tr [a-m] [n-z]", "cat data.txt | tr [n-z] [a-m]", "cat data.txt | tr [A-M] [N-Z]" and "cat data.txt | tr [N-Z] [A-M]"
+and compared the four results. For non numerical characters, in each position, the 1 unique character of the four options is the one that should be in the final password
 
-Summary of lessons:
+Gur pnssworq vs 7x16JArUVv5LxVuJssSVqootnHGyw9D4 (n-z)
+Ghe caffjbed if 7k16JAeUVi5LkVhJffSVdbbgaHGlj9D4 (a-m)
+Gur cnffjbeq vf 7k16JArHIv5LxIuJfsFIdbbtaHGlw9D4 (A-M)
+Tur cnffjbeq vf 7k16WNrUVv5YxVuWfsSVdbbtaUTlw9Q4
 
+password: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+Summary of lessons: tr is cool to change characters to diff characters. Also note to actually learn how to pipe and redirect properly later
