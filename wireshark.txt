@@ -2,7 +2,26 @@ Nicholas Vlahos-Sten. I worked alone.
 
 === DAYTIME QUESTIONS ===
 
-1.
+1. 
+
+The TCP handshake are the first 3 frame summaries. First here, you can see port 55302 and Ip address 192.168.169.128 (the virtual machine) sending a message to port 13 and IP address 129.6.15.28 (NIST) saying it wants to communicate. 
+1	0.000000000	192.168.169.128	129.6.15.28	TCP	74	55302 → 13 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM TSval=3634736410 TSecr=0 WS=128
+In the 2nd frame summary, notice how the IP addresses and ports are swapped in order. This is because this is NIST telling the virtual machine's TCP that yes you can communicate
+2	0.043987495	129.6.15.28	192.168.169.128	TCP	60	13 → 55302 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1460
+Then the 3rd frame summary we're back to the order of the 1st summary, because this is TCP acknowledging the message to complete the handshake 
+3	0.044885481	192.168.169.128	129.6.15.28	TCP	54	55302 → 13 [ACK] Seq=1 Ack=1 Win=64240 Len=0
+
+2. It uses the port number 55302
+
+3. 
+
+
+4.
+This frame because it's the only frame whose protocol is DAYTIME instead of TCP, which means that that it is where the DAYTIME info is store
+4	0.084548119	129.6.15.28	192.168.169.128	DAYTIME	105	DAYTIME Response
+
+
+
 
 
 === HTTP QUESTIONS ===
