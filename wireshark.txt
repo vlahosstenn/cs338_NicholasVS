@@ -13,20 +13,26 @@ Then the 3rd frame summary we're back to the order of the 1st summary, because t
 
 2. It uses the port number 55302
 
-3. 
-
+3. So it can participate in TCP. Ports are the endpoints that TCP uses to facilitate a network conversation, and contain the process and protocol information that lets the conversation happen. You can't send something straight to an IP address.   
 
 4.
 This frame because it's the only frame whose protocol is DAYTIME instead of TCP, which means that that it is where the DAYTIME info is store
 4	0.084548119	129.6.15.28	192.168.169.128	DAYTIME	105	DAYTIME Response
 
+5. SYN and ACK are simple binary flags, contained in one bit and set to 1 or 0.
 
+The SYN flag is set to 1 on the first message each party in the conversation sends to the other, and it allows them both to synchronize sequence numbers. So NC sent a message with a SYN flag set on its first message to NIST, and NIST sent a message with a SYN flag set on its first message back. 
 
+When a message sent by an IP address has the ACK flag set to 1, it means that the IP address acknowledges that it received the previous message sent to them by the IP address its sending its current message to. In a successful and bug free series of messages, every one message except the first one should have ACK as 1. 
+
+6. NC initiated the closing. It happens at this frame summary, initiated by port 55302, which is nc. You can tell because the FIN flag is set to 1, and FIN tells the other agent in the conversation that it's about to end (and then the final message after this is NIST acknowledging this). This makes logical sense that NC ends the conversation, because only it knows that it successfully recieved the information it asked for, and once verifying that has no reason to continue the conversation. 
+
+5	0.085312360	192.168.169.128	129.6.15.28	TCP	54	55302 → 13 [FIN, ACK] Seq=1 Ack=53 Win=64188 Len=0
 
 
 === HTTP QUESTIONS ===
 
-1.
+1. 3 TCP connections were opened. Three seperate This is because there were 6 SYNS
 
 
 === OTHER QUESTIONS ===
