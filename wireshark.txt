@@ -32,7 +32,17 @@ When a message sent by an IP address has the ACK flag set to 1, it means that th
 
 === HTTP QUESTIONS ===
 
-1. 3 TCP connections were opened. Three seperate This is because there were 6 SYNS
+1. 2 TCP connections were opened. Ports 57216 and 57224 both opened a connection with port 80 (jeffondich.com), which required 2 TCP connections. Also, I counted a total of 4 SYN flags, and each TCP connection uses 2 SYN flags. 
+
+2. 
+On frame line 4, because the source is nc and the destination is jeffondich.com (IE nc is asking the website for something), the protocol is http and it is trying to GET the web address. 
+
+4	0.019588662	192.168.169.128	172.233.221.124	HTTP	404	GET /index.html HTTP/1.1 
+
+3.
+On frame line 8, because the source is nc and the destination is jeffondich.com (IE nc is asking the website for something), the protocol is http and it is trying to GET the colorado jpg. 
+
+8	0.207650207	192.168.169.128	172.233.221.124	HTTP	443	GET /jeff-square-colorado.jpg HTTP/1.1 
 
 
 === OTHER QUESTIONS ===
